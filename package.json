@@ -1,6 +1,6 @@
 {
   "name": "tink-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Production-ready TypeScript SDK for the Tink Open Banking API. Full coverage of accounts, transactions, providers, categories, statistics, users, investments, loans, budgets, cash flow, financial calendar, account check, balance check, income check, expense check, risk insights, risk categorisation, business account check, connector, Tink Link URL builder, connectivity, and webhooks.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -58,8 +58,8 @@
     "ts-jest": "^29.2.4",
     "typescript": "^5.5.4"
   },
-  "homepage": "https://github.com/kanishka/tink-node#readme",
+  "homepage": "https://github.com/iamkanishka/tink-client#readme",
   "bugs": {
-    "url": "https://github.com/kanishka/tink-node/issues"
+    "url": "https://github.com/iamkanishka/tink-client/issues"
   }
 }

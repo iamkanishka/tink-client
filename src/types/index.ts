@@ -1,5 +1,5 @@
 // =============================================================================
-// tink-node — TypeScript type definitions
+// tink-client — TypeScript type definitions
 // Tink Open Banking API client for Node.js
 // https://docs.tink.com/api
 // =============================================================================

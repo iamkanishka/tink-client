@@ -1,5 +1,5 @@
 /**
- * Internal utility helpers for the tink-node client.
+ * Internal utility helpers for the tink-client client.
  *
  * These functions handle URL and query string construction, money parsing,
  * parameter validation, and data sanitisation for logging.

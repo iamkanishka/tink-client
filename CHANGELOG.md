@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to tink-node are documented here.
+All notable changes to tink-client are documented here.
 
 ## [1.0.0] — 2025-03-20
 

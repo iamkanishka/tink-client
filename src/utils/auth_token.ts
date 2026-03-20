@@ -10,7 +10,7 @@
  *
  * @example
  * ```ts
- * import { parseExpiration, expired } from "tink-node";
+ * import { parseExpiration, expired } from "tink-client";
  *
  * const tokenResponse = await tink.auth.getAccessToken(id, secret, scope);
  * const expiresAt = parseExpiration(tokenResponse);

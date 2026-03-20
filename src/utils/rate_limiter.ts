@@ -10,7 +10,7 @@
  *
  * @example
  * ```ts
- * import { check } from "tink-node";
+ * import { check } from "tink-client";
  *
  * const result = check("user:u1");
  * if (result === "rate_limited") {

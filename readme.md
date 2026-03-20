@@ -1,6 +1,6 @@
-# tink-node
+# tink-client
 
-[![npm](https://img.shields.io/npm/v/tink-node)](https://www.npmjs.com/package/tink-node)
+[![npm](https://img.shields.io/npm/v/tink-client)](https://www.npmjs.com/package/tink-client)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
@@ -14,7 +14,7 @@ Zero runtime dependencies · Dual CJS/ESM · Full TypeScript types · Node.js �
 ## Installation
 
 ```bash
-npm install tink-node
+npm install tink-client
 ```
 
 ---
@@ -53,7 +53,7 @@ npm install tink-node
 ## Quick start
 
 ```ts
-import { TinkClient } from "tink-node";
+import { TinkClient } from "tink-client";
 
 const tink = new TinkClient({
   clientId: process.env.TINK_CLIENT_ID,
@@ -441,7 +441,7 @@ app.post("/webhooks/tink", express.text({ type: "*/*" }), async (req, res) => {
 ## Error Handling
 
 ```ts
-import { TinkClient, TinkError } from "tink-node";
+import { TinkClient, TinkError } from "tink-client";
 
 try {
   await tink.accounts.listAccounts();
@@ -474,7 +474,7 @@ try {
 ## Token Expiry Utilities
 
 ```ts
-import { parseExpiration, expired, timeUntilExpiration } from "tink-node";
+import { parseExpiration, expired, timeUntilExpiration } from "tink-client";
 
 const token = await tink.auth.getAccessToken(clientId, clientSecret, scope);
 const expiresAt = parseExpiration(token as Record<string, unknown>);
@@ -493,7 +493,7 @@ if (ttl.ok) console.log(`Token expires in ${ttl.seconds}s`);
 ## Retry Utility
 
 ```ts
-import { withRetry } from "tink-node";
+import { withRetry } from "tink-client";
 
 const result = await withRetry(() => tink.accounts.listAccounts(), {
   maxAttempts: 5,

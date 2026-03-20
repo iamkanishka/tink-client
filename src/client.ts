@@ -6,7 +6,7 @@
  *
  * @example
  * ```ts
- * import { TinkClient } from "tink-node";
+ * import { TinkClient } from "tink-client";
  *
  * const tink = new TinkClient({
  *   clientId:     process.env.TINK_CLIENT_ID,
@@ -148,7 +148,7 @@ export class TinkClient {
       userId: config.userId,
       fetchFn: config.fetchFn,
       defaultHeaders: {
-        "user-agent": `tink-node/${VERSION}`,
+        "user-agent": `tink-client/${VERSION}`,
         ...config.defaultHeaders,
       },
     });

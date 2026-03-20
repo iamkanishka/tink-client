@@ -1,5 +1,5 @@
 /**
- * tink-node — Tink Open Banking API client for Node.js
+ * tink-client — Tink Open Banking API client for Node.js
  *
  * A production-ready TypeScript SDK for the Tink API covering all endpoints:
  * accounts, transactions, providers, categories, statistics, users, investments,
@@ -9,7 +9,7 @@
  *
  * @example
  * ```ts
- * import { TinkClient } from "tink-node";
+ * import { TinkClient } from "tink-client";
  *
  * const tink = new TinkClient({
  *   clientId:     process.env.TINK_CLIENT_ID,
