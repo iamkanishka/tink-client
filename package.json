@@ -1,37 +1,65 @@
 {
   "name": "tink-banking",
   "version": "1.0.0",
-  "description": "Typescript/Javascript Wrapper for Tink APIs: Seamlessly integrate with Tink's open banking platform to access financial data, manage payments, and enable innovative financial solutions. This library provides a user-friendly interface to interact with Tink's comprehensive APIs, ensuring secure and efficient integration for Elixir-based applications.",
-  "main": "dist/index.js",
-  "bin": {
-    "tink-banking": "dist/index.js"
+  "description": "Production-ready TypeScript SDK for the Tink Open Banking API. Full coverage of accounts, transactions, providers, categories, statistics, users, investments, loans, budgets, cash flow, financial calendar, account check, balance check, income check, expense check, risk insights, risk categorisation, business account check, connector, Tink Link URL builder, connectivity, and webhooks.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
   },
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "bnp": "npm run build & npm publish",
-    "bns": "npm run build & npm run start"
-  },
-  "homepage": "https://github.com/iamkanishka/Tink.js/blob/master/readme.md",
-  "keywords": [
-    "tink-banking",
-    "typescript",
-    "javascript",
-    "npm",
-    "open banking"
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
   ],
+  "scripts": {
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "clean": "npx rimraf dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build && npm run typecheck && npm test"
+  },
+  "keywords": [
+    "tink",
+    "open-banking",
+    "psd2",
+    "fintech",
+    "banking-api",
+    "typescript",
+    "sdk"
+  ],
+  "author": "Kanishka Naik",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamkanishka/Tink.js"
+    "url": "https://github.com/iamkanishka/tink.js"
   },
-  "author": "Kanishka Naik",
-  "bugs": {
-    "url": "https://github.com/iamkanishka/Tink.js/issues",
-    "email": "kanishkabc123@gmail.com"
+  "engines": {
+    "node": ">=18.0.0"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.0.0",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.0.0"
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.14.12",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.10",
+    "ts-jest": "^29.2.4",
+    "typescript": "^5.5.4"
+  },
+  "homepage": "https://github.com/kanishka/tink-node#readme",
+  "bugs": {
+    "url": "https://github.com/kanishka/tink-node/issues"
   }
 }
