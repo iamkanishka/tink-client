@@ -1,5 +1,5 @@
 {
-  "name": "tink-banking",
+  "name": "tink-client",
   "version": "1.0.0",
   "description": "Production-ready TypeScript SDK for the Tink Open Banking API. Full coverage of accounts, transactions, providers, categories, statistics, users, investments, loans, budgets, cash flow, financial calendar, account check, balance check, income check, expense check, risk insights, risk categorisation, business account check, connector, Tink Link URL builder, connectivity, and webhooks.",
   "main": "./dist/cjs/index.js",
