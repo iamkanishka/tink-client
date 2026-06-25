@@ -1,7 +1,9 @@
 src/
-*.tsbuildinfo
 tsconfig*.json
 jest.config.js
 .prettierrc
-.gitignore
 node_modules/
+*.test.ts
+tests/
+.github/
+coverage/
