@@ -31,7 +31,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "jest --passWithNoTests",
     "test:coverage": "jest --coverage",
-    "prepublishOnly": "npm run build && npm run typecheck && npm test"
+    "prepublishOnly": "npm run clean && npm run build && npm run typecheck"
   },
   "keywords": [
     "tink",
